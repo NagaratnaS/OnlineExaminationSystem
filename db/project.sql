@@ -278,14 +278,7 @@ CREATE TABLE `quiz` (
 --
 -- Dumping data for table `quiz`
 --
-CREATE TRIGGER SerialNo
-BEFORE INSERT
-ON
-`quiz`
-FOR EACH ROW
-BEGIN
-UPDATE `quiz` SET S.N = S.N + 1
-END
+
 
 INSERT INTO `quiz` (`eid`, `title`, `sahi`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
 ('558920ff906b8', 'Linux : File Managment', 2, 1, 2, 5, '', 'linux', '2015-06-23 09:03:59'),
@@ -348,14 +341,7 @@ INSERT INTO `user` (`name`, `gender`, `college`, `email`, `mob`, `password`) VAL
 ('Vikash', 'M', 'KNIT sultanpur@gmail.com', 'vikash@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e');
 
 --
--- Indexes for dumped tables
---
-CREATE PROCEDURE USERCALL
-AS
-SELECT * FROM USER
-GO;
 
-EXEC USERCALL;
 
 --
 -- Indexes for table `admin`
